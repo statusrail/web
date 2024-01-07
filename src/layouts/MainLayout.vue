@@ -1,6 +1,6 @@
 <template>
-  <q-toolbar class="bg-white text-blue q-my-md">
-    <q-btn-dropdown stretch flat no-caps label="Status Rail">
+  <q-toolbar class="bg-white q-my-auto text-blue ">
+    <q-btn-dropdown stretch flat no-caps label="statusrail">
       <q-list>
         <q-item-label header>Projects</q-item-label>
         <q-item v-for="n in 3" :key="`x.${n}`" clickable v-close-popup tabindex="0">
@@ -13,7 +13,11 @@
       </q-list>
     </q-btn-dropdown>
     <q-space />
-    <q-btn stretch flat no-caps label="GitHub" />
+    <q-btn flat no-caps stretch @click="goToGitHub">
+      <q-icon class="text-dark" size="md">
+        <img src="../assets/github.svg"  alt="GitHub"/>
+      </q-icon>
+    </q-btn>
   </q-toolbar>
   <q-separator blue inset />
   <q-img
@@ -34,6 +38,12 @@ export default defineComponent({
     return {
       tab: ref('images')
     }
+  },
+
+  methods: {
+    goToGitHub() {
+      window.open('https://github.com/statusrail');
+    },
   }
 });
 </script>
