@@ -1,10 +1,10 @@
 <template>
+  <q-card class="my-card text-white" style="background: limegreen" >
+    <q-card-section>
+      <div class="text-h6 flex flex-center">All Systems Operational</div>
+    </q-card-section>
+  </q-card>
   <q-page class="flex flex-center">
-    <div class="column items-center q-ma-xl" style="max-width: 500px; text-align: center;">
-      <h1 class="text-weight-bold">statusrail</h1>
-      <p class="subtitle">Check the status of your favorite services.</p>
-      <q-separator color="primary" size="2px" class="q-my-md"/>
-    </div>
   </q-page>
 </template>
 
